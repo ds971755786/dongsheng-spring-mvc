@@ -175,6 +175,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.37</version>
         </dependency>
+        
+        <dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>3.0.13.Final</version>
+		</dependency>
     </dependencies>
     <build>
         <plugins>
@@ -228,4 +234,11 @@
             </plugin>
         </plugins>
     </build>
+    
+    <repositories>
+	   <repository>
+		  <id>JBoss repository</id>
+		  <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+	   </repository>
+	</repositories>
 </project>
