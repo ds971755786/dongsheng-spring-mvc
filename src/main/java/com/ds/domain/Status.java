@@ -6,6 +6,7 @@ public class Status {
 	private Long id;
 	private String version;
 	private GregorianCalendar time;
+	private Character character;
 	
 	public Long getId() {
 		return id;
@@ -31,5 +32,4 @@ public class Status {
 	public void setCharacter(Character character) {
 		this.character = character;
 	}
-	private Character character;
 }
