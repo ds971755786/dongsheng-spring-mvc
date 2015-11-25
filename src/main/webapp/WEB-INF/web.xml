@@ -7,12 +7,6 @@
     	<location>/generalError</location>
 	</error-page>
 	
-		<!-- Auto scan REST service -->
-	<context-param>
-		<param-name>resteasy.scan</param-name>
-		<param-value>true</param-value>
-	</context-param>
-	
 	<!-- this need same with resteasy servlet url-pattern -->
 	<context-param>
 		<param-name>resteasy.servlet.mapping.prefix</param-name>
@@ -25,11 +19,19 @@
 		</listener-class>
 	</listener>
 	
+	<listener>
+        <listener-class>org.jboss.resteasy.plugins.spring.SpringContextLoaderListener</listener-class>
+    </listener>
+	
 	<servlet>
 		<servlet-name>resteasy-servlet</servlet-name>
 		<servlet-class>
 			org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
 		</servlet-class>
+		<init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.ds.config.RESTApplication</param-value>
+        </init-param>
 	</servlet>
      
 	<servlet-mapping>
