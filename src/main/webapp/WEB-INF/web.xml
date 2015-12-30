@@ -19,9 +19,7 @@
 		</listener-class>
 	</listener>
 	
-	<listener>
-        <listener-class>org.jboss.resteasy.plugins.spring.SpringContextLoaderListener</listener-class>
-    </listener>
+
 	
 	<servlet>
 		<servlet-name>resteasy-servlet</servlet-name>
